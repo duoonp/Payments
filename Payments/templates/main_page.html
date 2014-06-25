@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}База платежей{% endblock %}
+{% block head %}База платежей{% endblock %}
+{% block content %}
+    {% if user.username %}
+      <p>Добро пожаловать, {{ user.username }}!</br>
+        Теперь вы можете изменять информацию.</p>
+        
+    <p>
+    <a href="/payments/">Платежи</a> <a href="/payments/add/">[+]</a> </p>
+    <p>
+
+	<p>
+	<a href="/employees/">Сотрудники</a> <a href="/employees/add/">[+]</a> </p>
+	<p>
+	<a href="/entities/">Плательщики</a> <a href="/entities/add/">[+]</a> </p>
+	<p>
+	<a href="/banks/">Банки</a> <a href="/banks/add/">[+]</a> </p>
+	<p>
+	<a href="/categories/">Категории платежей</a> <a href="/categories/add/">[+]</a> </p>
+	<p>
+    {% else %}
+      <p>Добро пожаловать!</br>
+        Пожалуйста, <a href="/login/">войдите<a/>
+        чтобы редактировать данные платежей.</p>
+        
+    <p>
+    <a href="/payments/">Платежи</a> </p> 
+    <p>
+    <a href="/budget/">Бюджет</a> </p>
+    {% endif %}
+    
+    
+ {% endblock %}
